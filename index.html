@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeLive</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/69b7050fd6.js" crossorigin="anonymous"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/i.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+              <label><i class="fa-brands fa-html5 icon-1"></i>HTML</label>
+              <textarea id="html-code" onkeyup="run()"></textarea>
+              <pre><code id="html-preview" class="language-html"></code></pre>
+           
+              <label><i class="fa-brands fa-css3-alt icon-2"></i>CSS</label>
+              <textarea id="css-code" onkeyup="run()"></textarea>
+              <pre><code id="css-preview" class="language-css"></code></pre>
+
+              <label><i class="fa-brands fa-js icon-3"></i>JS</label> 
+              <textarea id="js-code" onkeyup="run()"></textarea>
+              <pre><code id="js-preview" class="language-javascript"></code></pre>
+
+              <!-- Save and Refresh buttons -->
+              <div class="buttons">
+                <button class="btn-1" id="save-btn" onclick="saveCode()">Save</button>
+                <button class="btn-2" id="refresh-btn" onclick="refreshPage()">Refresh</button>
+            </div>
+            </div>
+            <div class="right">
+              <label><i class="fa-solid fa-pager"></i> Output</label>
+              <iframe id="output"></iframe>
+            </div>
+        </div>
+
+        <!-- Not Supported Section -->
+        <div id="unsupported" style="display: none;">
+            <h2>This website is not supported on screens smaller than 600px.</h2>
+            <p>Please resize your screen to a larger width to use this editor.</p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
